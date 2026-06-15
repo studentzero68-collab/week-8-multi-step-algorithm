@@ -45,3 +45,21 @@ function getBelowAverage(students, average) {
 
   return belowAverage;
 }
+
+// Main function
+function analyzeStudents(students) {
+  const average = calculateAverage(students);
+  const sortedStudents = sortStudents(students);
+
+  let topThree = [];
+
+  for (let i = 0; i < 3 && i < sortedStudents.length; i++) {
+    topThree.push(sortedStudents[i]);
+  }
+
+  return {
+    topThree: topThree,
+    average: average,
+    belowAverage: getBelowAverage(students, average)
+  };
+}
