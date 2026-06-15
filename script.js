@@ -78,3 +78,21 @@ const results = analyzeStudents(students);
 console.log("Top 3 Students:", results.topThree);
 console.log("Class Average:", results.average);
 console.log("Below Average:", results.belowAverage);
+
+// Test Case 1
+console.assert(
+  calculateAverage(students) === 75.6,
+  "Average calculation failed"
+);
+
+// Test Case 2
+console.assert(
+  results.topThree[0].name === "Sarah",
+  "Top scorer should be Sarah"
+);
+
+// Test Case 3
+console.assert(
+  results.topThree.length === 3,
+  "Should return exactly 3 students"
+);
