@@ -96,3 +96,17 @@ console.assert(
   results.topThree.length === 3,
   "Should return exactly 3 students"
 );
+
+// Test Case 4
+console.assert(
+  results.belowAverage.length === 2,
+  "Should have 2 students below average"
+);
+
+// Test Case 5
+console.assert(
+  results.belowAverage.some(student => student.name === "Mike"),
+  "Mike should be below average"
+);
+
+console.log("All tests completed");
