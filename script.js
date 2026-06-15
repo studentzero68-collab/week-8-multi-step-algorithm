@@ -1,10 +1,10 @@
-// Time Complexity:
-// Finding the average = O(n)
-// Finding students below average = O(n)
-// Bubble sort = O(n²)
-// Overall complexity = O(n²) because sorting takes the longest
+/* Time Complexity: 2hourss
+Finding the average = O(n)
+Finding students below average = O(n)
+Bubble sort = O(n²)
+Overall complexity = O(n²) because sorting takes the longest*/
 
-// Calculate the class average
+/* Calculate the class average */
 function calculateAverage(students) {
   let total = 0;
 
@@ -15,8 +15,8 @@ function calculateAverage(students) {
   return total / students.length;
 }
 
-// Sort students from highest score to lowest score
-// Using Bubble Sort because sort() is not allowed
+/* Sort students from highest score to lowest score */
+/* Using Bubble Sort because sort() is not allowed */
 function sortStudents(students) {
   const sortedStudents = [...students];
 
@@ -33,7 +33,7 @@ function sortStudents(students) {
   return sortedStudents;
 }
 
-// Find students who scored below the average
+/* Find students who scored below the average */
 function getBelowAverage(students, average) {
   let belowAverage = [];
 
@@ -46,7 +46,7 @@ function getBelowAverage(students, average) {
   return belowAverage;
 }
 
-// Main function
+/* Main function*/
 function analyzeStudents(students) {
   const average = calculateAverage(students);
   const sortedStudents = sortStudents(students);
@@ -64,7 +64,7 @@ function analyzeStudents(students) {
   };
 }
 
-// Test data
+/* Test data */
 const students = [
   { name: "John", score: 78 },
   { name: "Sarah", score: 92 },
@@ -79,31 +79,31 @@ console.log("Top 3 Students:", results.topThree);
 console.log("Class Average:", results.average);
 console.log("Below Average:", results.belowAverage);
 
-// Test Case 1
+/* Test Case 1*/
 console.assert(
   calculateAverage(students) === 75.6,
   "Average calculation failed"
 );
 
-// Test Case 2
+/* Test Case 2*/
 console.assert(
   results.topThree[0].name === "Sarah",
   "Top scorer should be Sarah"
 );
 
-// Test Case 3
+/* Test Case 3*/
 console.assert(
   results.topThree.length === 3,
   "Should return exactly 3 students"
 );
 
-// Test Case 4
+/* Test Case 4 */
 console.assert(
   results.belowAverage.length === 2,
   "Should have 2 students below average"
 );
 
-// Test Case 5
+/* Test Case 5 */
 console.assert(
   results.belowAverage.some(student => student.name === "Mike"),
   "Mike should be below average"
