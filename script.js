@@ -63,3 +63,18 @@ function analyzeStudents(students) {
     belowAverage: getBelowAverage(students, average)
   };
 }
+
+// Test data
+const students = [
+  { name: "John", score: 78 },
+  { name: "Sarah", score: 92 },
+  { name: "Mike", score: 65 },
+  { name: "Emma", score: 88 },
+  { name: "David", score: 55 }
+];
+
+const results = analyzeStudents(students);
+
+console.log("Top 3 Students:", results.topThree);
+console.log("Class Average:", results.average);
+console.log("Below Average:", results.belowAverage);
