@@ -32,3 +32,16 @@ function sortStudents(students) {
 
   return sortedStudents;
 }
+
+// Find students who scored below the average
+function getBelowAverage(students, average) {
+  let belowAverage = [];
+
+  for (let i = 0; i < students.length; i++) {
+    if (students[i].score < average) {
+      belowAverage.push(students[i]);
+    }
+  }
+
+  return belowAverage;
+}
